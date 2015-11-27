@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="../css/print-bisel.css" type="text/css" media="print" />
 <link href="https://fonts.googleapis.com/css?family=Michroma" rel="stylesheet" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
 <script src="../js/lab.js"></script>
 </head>
 
@@ -28,11 +28,40 @@
 				
 <?php
 
-$fecha = $_GET['fecha'];
+$fecha=$_GET['fecha'];
+$completos = $_GET['completos'];
+$ranurados = $_GET['ranurados'];
+$tresPiezas = $_GET['tresPiezas'];
+
 $cr39 = $_GET['cr39'];
 $poly = $_GET['poly'];
-$hiindex = $_GET['hiindex'];
+$hi_index = $_GET['hiindex'];
 $cristal = $_GET['cristal'];
+
+$progresivo = $_GET['progresivo'];
+$monofocal = $_GET['monofocal'];
+$ft = $_GET['ft'];
+$blend = $_GET['blend'];
+
+$w = $_GET['w'];
+$ar = $_GET['ar'];
+$foto = $_GET['foto'];
+$transitions = $_GET['transitions'];
+$crizal = $_GET['crizal'];
+$transitions_crizal = $_GET['transitions_crizal'];
+$arfoto = $_GET['arFoto'];
+$polarizado = $_GET['polarizado'];
+$polarizado_ar = $_GET['polarizado_ar'];
+
+$fecha = $_GET['fecha'];
+$terminado = $_GET['terminado'];
+$procesado = $_GET['procesado'];
+$rebisel = $_GET['rebisel'];
+
+$sergio = $_GET['sergio'];
+$jesus = $_GET['jesus'];
+$angel = $_GET['angel'];
+$francisco = $_GET['francisco'];
 
 
 			include ('../funciones.php');
@@ -55,8 +84,19 @@ echo'
 				<div class="reports">
 					<div id="donutchart" style="width: 770px; height: 450px;"></div>
 				</div>
-			</div>
+				<div class="row change-page">
+					<ul class="pagination" style="font-size:10px;margin-left:20px;">
+			            <li class="armazon"><a href="armazon.php?fecha=<?php echo $fecha; ?>&amp;ranurados=<?php echo $ranurados;?>&amp;completos=<?php echo $completos?>&amp;tresPiezas=<?php echo $tresPiezas;?>&amp;monofocal=<?php echo $monofocal;?>&amp;progresivo=<?php echo $progresivo;?>&amp;ft=<?php echo $ft;?>&amp;blend=<?php echo $blend;?>&amp;cr39=<?php echo $cr39; ?>&amp;poly=<?php echo $poly; ?>&amp;hiindex=<?php echo $hi_index; ?>&amp;cristal=<?php echo $cristal; ?>&amp;w=<?php echo $w; ?>&amp;ar=<?php echo $ar; ?>&amp;foto=<?php echo $foto; ?>&amp;transitions=<?php echo $transitions; ?>&amp;crizal=<?php echo $crizal; ?>&amp;transitions_crizal=<?php echo $transitions_crizal; ?>&amp;arFoto=<?php echo $arfoto; ?>&amp;polarizado=<?php echo $polarizado; ?>&amp;polarizado_ar=<?php echo $polarizado_ar; ?>&amp;terminado=<?php echo $terminado; ?>&amp;procesado=<?php echo $procesado; ?>&amp;rebisel=<?php echo $rebisel; ?>&amp;sergio=<?php echo $sergio; ?>&amp;angel=<?php echo $angel; ?>&amp;francisco=<?php echo $francisco; ?>&amp;jesus=<?php echo $jesus; ?>">Armazones</a></li>
+			            <li class="micas "><a href="micas.php?fecha=<?php echo $fecha; ?>&amp;ranurados=<?php echo $ranurados;?>&amp;completos=<?php echo $completos?>&amp;tresPiezas=<?php echo $tresPiezas;?>&amp;monofocal=<?php echo $monofocal;?>&amp;progresivo=<?php echo $progresivo;?>&amp;ft=<?php echo $ft;?>&amp;blend=<?php echo $blend;?>&amp;cr39=<?php echo $cr39; ?>&amp;poly=<?php echo $poly; ?>&amp;hiindex=<?php echo $hi_index; ?>&amp;cristal=<?php echo $cristal; ?>&amp;w=<?php echo $w; ?>&amp;ar=<?php echo $ar; ?>&amp;foto=<?php echo $foto; ?>&amp;transitions=<?php echo $transitions; ?>&amp;crizal=<?php echo $crizal; ?>&amp;transitions_crizal=<?php echo $transitions_crizal; ?>&amp;arFoto=<?php echo $arfoto; ?>&amp;polarizado=<?php echo $polarizado; ?>&amp;polarizado_ar=<?php echo $polarizado_ar; ?>&amp;terminado=<?php echo $terminado; ?>&amp;procesado=<?php echo $procesado; ?>&amp;rebisel=<?php echo $rebisel; ?>&amp;sergio=<?php echo $sergio; ?>&amp;angel=<?php echo $angel; ?>&amp;francisco=<?php echo $francisco; ?>&amp;jesus=<?php echo $jesus; ?>">Micas</a></li>
+			            <li class="materiales active pagination"><a href="#">Materiales</a></li>
+			            <li class="tratamiento"><a href="tratamiento.php?fecha=<?php echo $fecha; ?>&amp;ranurados=<?php echo $ranurados;?>&amp;completos=<?php echo $completos?>&amp;tresPiezas=<?php echo $tresPiezas;?>&amp;monofocal=<?php echo $monofocal;?>&amp;progresivo=<?php echo $progresivo;?>&amp;ft=<?php echo $ft;?>&amp;blend=<?php echo $blend;?>&amp;cr39=<?php echo $cr39; ?>&amp;poly=<?php echo $poly; ?>&amp;hiindex=<?php echo $hi_index; ?>&amp;cristal=<?php echo $cristal; ?>&amp;w=<?php echo $w; ?>&amp;ar=<?php echo $ar; ?>&amp;foto=<?php echo $foto; ?>&amp;transitions=<?php echo $transitions; ?>&amp;crizal=<?php echo $crizal; ?>&amp;transitions_crizal=<?php echo $transitions_crizal; ?>&amp;arFoto=<?php echo $arfoto; ?>&amp;polarizado=<?php echo $polarizado; ?>&amp;polarizado_ar=<?php echo $polarizado_ar; ?>&amp;terminado=<?php echo $terminado; ?>&amp;procesado=<?php echo $procesado; ?>&amp;rebisel=<?php echo $rebisel; ?>&amp;sergio=<?php echo $sergio; ?>&amp;angel=<?php echo $angel; ?>&amp;francisco=<?php echo $francisco; ?>&amp;jesus=<?php echo $jesus; ?>">Tratamiento</a></li>
+			            <li class="tipos"><a href="tipo.php?fecha=<?php echo $fecha; ?>&amp;ranurados=<?php echo $ranurados;?>&amp;completos=<?php echo $completos?>&amp;tresPiezas=<?php echo $tresPiezas;?>&amp;monofocal=<?php echo $monofocal;?>&amp;progresivo=<?php echo $progresivo;?>&amp;ft=<?php echo $ft;?>&amp;blend=<?php echo $blend;?>&amp;cr39=<?php echo $cr39; ?>&amp;poly=<?php echo $poly; ?>&amp;hiindex=<?php echo $hi_index; ?>&amp;cristal=<?php echo $cristal; ?>&amp;w=<?php echo $w; ?>&amp;ar=<?php echo $ar; ?>&amp;foto=<?php echo $foto; ?>&amp;transitions=<?php echo $transitions; ?>&amp;crizal=<?php echo $crizal; ?>&amp;transitions_crizal=<?php echo $transitions_crizal; ?>&amp;arFoto=<?php echo $arfoto; ?>&amp;polarizado=<?php echo $polarizado; ?>&amp;polarizado_ar=<?php echo $polarizado_ar; ?>&amp;terminado=<?php echo $terminado; ?>&amp;procesado=<?php echo $procesado; ?>&amp;rebisel=<?php echo $rebisel; ?>&amp;sergio=<?php echo $sergio; ?>&amp;angel=<?php echo $angel; ?>&amp;francisco=<?php echo $francisco; ?>&amp;jesus=<?php echo $jesus; ?>">Tipos</a></li>
+			            <li class="tecnicos"><a href="tecnicos.php?fecha=<?php echo $fecha; ?>&amp;ranurados=<?php echo $ranurados;?>&amp;completos=<?php echo $completos?>&amp;tresPiezas=<?php echo $tresPiezas;?>&amp;monofocal=<?php echo $monofocal;?>&amp;progresivo=<?php echo $progresivo;?>&amp;ft=<?php echo $ft;?>&amp;blend=<?php echo $blend;?>&amp;cr39=<?php echo $cr39; ?>&amp;poly=<?php echo $poly; ?>&amp;hiindex=<?php echo $hi_index; ?>&amp;cristal=<?php echo $cristal; ?>&amp;w=<?php echo $w; ?>&amp;ar=<?php echo $ar; ?>&amp;foto=<?php echo $foto; ?>&amp;transitions=<?php echo $transitions; ?>&amp;crizal=<?php echo $crizal; ?>&amp;transitions_crizal=<?php echo $transitions_crizal; ?>&amp;arFoto=<?php echo $arfoto; ?>&amp;polarizado=<?php echo $polarizado; ?>&amp;polarizado_ar=<?php echo $polarizado_ar; ?>&amp;terminado=<?php echo $terminado; ?>&amp;procesado=<?php echo $procesado; ?>&amp;rebisel=<?php echo $rebisel; ?>&amp;sergio=<?php echo $sergio; ?>&amp;angel=<?php echo $angel; ?>&amp;francisco=<?php echo $francisco; ?>&amp;jesus=<?php echo $jesus; ?>">T&eacute;cnicos</a></li>    
 
+					</ul>
+				</div>
+
+			</div>
 								
 
 			<script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -70,7 +110,7 @@ echo'
 						['Materiales', 'Total'],
 						['CR-39',<?php echo $cr39;?>],
 						['Poly',<?php echo $poly;?>],
-						['Hi Index',<?php echo $hiindex;?>],
+						['Hi Index',<?php echo $hi_index;?>],
 						['Cristal',<?php echo $cristal;?>],
 						]);
 					var options = {

@@ -9,8 +9,7 @@
 <link rel="stylesheet" href="../css/print-bisel.css" type="text/css" media="print" />
 <link href="https://fonts.googleapis.com/css?family=Michroma" rel="stylesheet" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/lab.js"></script>
+<script src="../../js/bootstrap.min.js"></script>
 </head>
 
 
@@ -81,7 +80,7 @@ echo'
 					var data = google.visualization.arrayToDataTable([
 						['Tecnico', 'Biseles'],
 						['Sergio',     <?php
-									include('connection.php');
+									include('../connection.php');
 		      						$queEmp = "SELECT count(*) as numero  FROM pedido where fecha='$sdatee' and tecnico='Sergio'";
 		    						$resEmp = mysql_query($queEmp, $con) or die(mysql_error());
 		    						$totEmp = mysql_num_rows($resEmp);
