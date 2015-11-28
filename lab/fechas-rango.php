@@ -1,6 +1,6 @@
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/lab.css">
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <link rel="stylesheet" type="text/css" href="css/informes.css">
@@ -9,7 +9,6 @@
 <link href="https://fonts.googleapis.com/css?family=Michroma" rel="stylesheet" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
-<script src="js/lab.js"></script>
 
 </head>
 
@@ -447,7 +446,7 @@ echo'
 						</ul>
 					</div>
 					<div class="col-md-4">
-						<li><a href="biseles-fecha/armazon.php?fecha=<?php echo $fecha; ?>&amp;fecha2=<?php echo $fecha2; ?>&amp;ranurados=<?php echo $ranurados;?>&amp;completos=<?php echo $completos?>&amp;tresPiezas=<?php echo $tresPiezas;?>&amp;monofocal=<?php echo $monofocal;?>&amp;progresivo=<?php echo $progresivo;?>&amp;ft=<?php echo $ft;?>&amp;blend=<?php echo $blend;?>&amp;cr39=<?php echo $cr39; ?>&amp;poly=<?php echo $poly; ?>&amp;hiindex=<?php echo $hi_index; ?>&amp;cristal=<?php echo $cristal; ?>&amp;w=<?php echo $w; ?>&amp;ar=<?php echo $ar; ?>&amp;foto=<?php echo $foto; ?>&amp;transitions=<?php echo $transitions; ?>&amp;crizal=<?php echo $crizal; ?>&amp;transitions_crizal=<?php echo $transitions_crizal; ?>&amp;arFoto=<?php echo $arFoto; ?>&amp;polarizado=<?php echo $polarizado; ?>&amp;polarizado_ar=<?php echo $polarizado_ar; ?>&amp;terminado=<?php echo $terminado; ?>&amp;procesado=<?php echo $procesado; ?>&amp;rebisel=<?php echo $rebisel; ?>&amp;sergio=<?php echo $sergio; ?>&amp;angel=<?php echo $angel; ?>&amp;francisco=<?php echo $francisco; ?>&amp;jesus=<?php echo $jesus; ?>"><i class="fa fa-pie-chart" style="font-size:48px;"></i>Armazon</a></li>
+						<li><a href="biseles-fecha-rango/armazon.php?fecha=<?php echo $fecha; ?>&amp;fecha2=<?php echo $fecha2; ?>&amp;ranurados=<?php echo $ranurados;?>&amp;completos=<?php echo $completos?>&amp;tresPiezas=<?php echo $tresPiezas;?>&amp;monofocal=<?php echo $monofocal;?>&amp;progresivo=<?php echo $progresivo;?>&amp;ft=<?php echo $ft;?>&amp;blend=<?php echo $blend;?>&amp;cr39=<?php echo $cr39; ?>&amp;poly=<?php echo $poly; ?>&amp;hiindex=<?php echo $hi_index; ?>&amp;cristal=<?php echo $cristal; ?>&amp;w=<?php echo $w; ?>&amp;ar=<?php echo $ar; ?>&amp;foto=<?php echo $foto; ?>&amp;transitions=<?php echo $transitions; ?>&amp;crizal=<?php echo $crizal; ?>&amp;transitions_crizal=<?php echo $transitions_crizal; ?>&amp;arFoto=<?php echo $arFoto; ?>&amp;polarizado=<?php echo $polarizado; ?>&amp;polarizado_ar=<?php echo $polarizado_ar; ?>&amp;terminado=<?php echo $terminado; ?>&amp;procesado=<?php echo $procesado; ?>&amp;rebisel=<?php echo $rebisel; ?>&amp;sergio=<?php echo $sergio; ?>&amp;angel=<?php echo $angel; ?>&amp;francisco=<?php echo $francisco; ?>&amp;jesus=<?php echo $jesus; ?>"><i class="fa fa-pie-chart" style="font-size:48px;"></i>Armazon</a></li>
 					</div>
 				</div>
 			</div>

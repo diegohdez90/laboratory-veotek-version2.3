@@ -10,8 +10,7 @@
 <link rel="stylesheet" href="../css/print-bisel.css" type="text/css" media="print" />
 <link href="https://fonts.googleapis.com/css?family=Michroma" rel="stylesheet" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/lab.js"></script>
+<script src="../	../js/bootstrap.min.js"></script>
 </head>
 
 
