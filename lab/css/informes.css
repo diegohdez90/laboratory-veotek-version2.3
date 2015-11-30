@@ -38,11 +38,11 @@ background-color: rgb(0,172,200);
 }
 
 .reports{
-	margin: 10px 0;
+	margin: 20px 0;
 }
 
 .reports img{
-	width: 30%;
+	width: 50%;
 	display:block;
     margin:auto;
 }
@@ -92,4 +92,8 @@ table{
 
 .informe-total{
 	height: 350%;
+}
+
+.change-page{
+	margin-top: -30px;
 }

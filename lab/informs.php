@@ -5,7 +5,6 @@
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <link rel="stylesheet" type="text/css" href="css/informes.css">
 <link rel="stylesheet" href="css/print-report.css" type="text/css" media="print" />
-<!--<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">-->
 <link href="https://fonts.googleapis.com/css?family=Michroma" rel="stylesheet" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
@@ -74,21 +73,18 @@ echo'
 
 	       			while ($row = mysql_fetch_array($ar_com)) {
 	       				echo "<tr><td>Completos</td><td>".$row['Completos']."</td></tr>";
-	       				$completos = $row['Completos'];
 	       			}
 
 	       			$query_armazon_Ranurados = "select count(*) as Ranurados from pedido where armazon = 'Ranurados' and fecha='$fecha'";
 	       			$ar_ranurado = mysql_query($query_armazon_Ranurados,$con);
 	       			while ($row = mysql_fetch_array($ar_ranurado)) {
 	       				echo "<tr><td>Ranurados</td><td>".$row['Ranurados']."</td></tr>";
-	       				$ranurados = $row['Ranurados'];
 	       			}
 
 	       			$query_armazon_3piezas = "select count(*) as 3Piezas from pedido where armazon = '3 piezas' and fecha='$fecha'";
 	       			$ar_3piezas = mysql_query($query_armazon_3piezas,$con);
 	       			while ($row = mysql_fetch_array($ar_3piezas)) {
 	       				echo "<tr><td>3 Piezas</td><td>".$row['3Piezas']."</td></tr>";
-	       				$tresPiezas = $row['3Piezas'];
 	       			}
 
 
@@ -99,28 +95,24 @@ echo'
 	       			$micas_mono = mysql_query($query_micas_Monofocal,$con);
 	       			while ($row = mysql_fetch_array($micas_mono)) {
 	       				echo "<tr><td>Monofocal</td><td>".$row['Monofocal']."</td></tr>";
-	       				$monofocal = $row['Monofocal'];
 	      			}
 
 	       			$query_micas_Progresivo = "select count(*) as Progresivo from pedido where micas = 'Progresivo' and fecha='$fecha'";      
 	       			$micas_pro = mysql_query($query_micas_Progresivo,$con);
 	       			while ($row = mysql_fetch_array($micas_pro)) {
 	       				echo "<tr><td>Progresivo</td><td>".$row['Progresivo']."</td></tr>";
-	       				$progresivo = $row['Progresivo'];
 	       			}
 
 	       			$query_micas_FlatTop = "select count(*) as FlatTop from pedido where micas = 'Flat-Top' and fecha='$fecha'";
 	       			$micas_flat = mysql_query($query_micas_FlatTop,$con);
 	       			while ($row = mysql_fetch_array($micas_flat)) {
 	       				echo "<tr><td>Flat-Top</td><td>".$row['FlatTop']."</td></tr>";
-	       				$ft = $row['FlatTop'];
 	       			}
 
 	       			$query_micas_Blend = "select count(*) as Blend from pedido where micas = 'Blend' and fecha='$fecha'";
 	       			$micas_blend = mysql_query($query_micas_Blend,$con);
 	       			while ($row = mysql_fetch_array($micas_blend)) {
 	       				echo "<tr><td>Blend</td><td>".$row['Blend']."</td></tr>";
-	       				$blend = $row['Blend'];
 	       			}
 
        				echo "<tr>";
@@ -130,28 +122,24 @@ echo'
 	       			$mat_CR39 = mysql_query($query_materiales_CR39,$con);
 	       			while ($row = mysql_fetch_array($mat_CR39)) {
 	       				echo "<tr><td>CR-39</td><td>".$row['CR39']."</td></tr>";
-	       				$cr39 = $row['CR39'];
 	       			}
 
 	       			$query_materiales_Poly = "select count(*) as Poly from pedido where materiales = 'Poly' and fecha='$fecha'";
 	       			$mat_Poly = mysql_query($query_materiales_Poly,$con);
 	       			while ($row = mysql_fetch_array($mat_Poly)) {
 	       				echo "<tr><td>Poly</td><td>".$row['Poly']."</td></tr>";
-	       				$poly = $row['Poly'];
 	       			}
 
 	       			$query_materiales_HI_Index = "select count(*) as HIIndex from pedido where materiales = 'HI-Index' and fecha='$fecha'";
 	       			$mat_Index = mysql_query($query_materiales_HI_Index,$con);
 	       			while ($row = mysql_fetch_array($mat_Index)) {
 	       				echo "<tr><td>HI-Index</td><td>".$row['HIIndex']."</td></tr>";
-	       				$hi_index = $row['HIIndex'];
 	       			}
 
 	       			$query_materiales_Cristal = "select count(*) as Cristal from pedido where materiales = 'Cristal' and fecha='$fecha'";
 	       			$mat_Cristal = mysql_query($query_materiales_Cristal,$con);
 	       			while ($row = mysql_fetch_array($mat_Cristal)) {
 	       				echo "<tr><td>Cristal</td><td>".$row['Cristal']."</td></tr>";
-	       				$cristal = $row['Cristal'];
 	       			}
 
 
@@ -162,63 +150,54 @@ echo'
 	       			$trat_BCO = mysql_query($query_tratamiento_BCO,$con);
 	       			while ($row = mysql_fetch_array($trat_BCO)) {
 	       				echo "<tr><td>BCO</td><td>".$row['BCO']."</td></tr>";
-	       				$w = $row['BCO'];
 	       			}
 
 	       			$query_tratamiento_Antireflejante = "select count(*) as Antireflejante from pedido where tratamiento = 'Antireflejante' and fecha='$fecha'";
 	       			$trat_Anti = mysql_query($query_tratamiento_Antireflejante,$con);
 	       			while ($row = mysql_fetch_array($trat_Anti)) {
 	       				echo "<tr><td>Antireflejante</td><td>".$row['Antireflejante']."</td></tr>";
-	       				$ar = $row['Antireflejante'];
 	       			}
 
 	       			$query_tratamiento_Fotocromatico = "select count(*) as Fotocromatico from pedido where tratamiento = 'Fotocromatico' and fecha='$fecha'";       	
 	       			$trat_foto = mysql_query($query_tratamiento_Fotocromatico,$con);
 	       			while ($row = mysql_fetch_array($trat_foto)) {
 	       				echo "<tr><td>Fotocromatico</td><td>".$row['Fotocromatico']."</td></tr>";
-	       				$foto = $row['Fotocromatico'];
 	       			}
 
 	       			$query_tratamiento_Transitions = "select count(*) as Transitions from pedido where tratamiento = 'Transitions' and fecha='$fecha'";
 	       			$trat_trans = mysql_query($query_tratamiento_Transitions,$con);
 	       			while ($row = mysql_fetch_array($trat_trans)) {
 	       				echo "<tr><td>Transitions</td><td>".$row['Transitions']."</td></tr>";
-	       				$transitions = $row['Transitions'];
 	       			}
 
 	       			$query_tratamiento_Crizal = "select count(*) as Crizal from pedido where tratamiento = 'Crizal' and fecha='$fecha'";
 	       			$trat_Crizal = mysql_query($query_tratamiento_Crizal,$con);
 	       			while ($row = mysql_fetch_array($trat_Crizal)) {
 	       				echo "<tr><td>Crizal</td><td>".$row['Crizal']."</td></tr>";
-	       				$crizal = $row['Crizal'];
 	       			}
 
 	       			$query_tratamiento_Transitions_Crizal = "select count(*) as TransitionsCrizal from pedido where tratamiento = 'Transitions-Crizal' and fecha='$fecha'";
 	       			$trat_Trans_Crizal = mysql_query($query_tratamiento_Transitions_Crizal,$con);
 	       			while ($row = mysql_fetch_array($trat_Trans_Crizal)) {
 	       				echo "<tr><td>Transitions-Crizal</td><td>".$row['TransitionsCrizal']."</td></tr>";
-	       				$transitions_crizal = $row['TransitionsCrizal'];
 	       			}
 
 	       			$query_tratamiento_ARFoto = "select count(*) as ARFoto from pedido where tratamiento = 'AR-Foto' and fecha='$fecha'";
 	       			$trat_ARFoto = mysql_query($query_tratamiento_ARFoto,$con);
 	       			while ($row = mysql_fetch_array($trat_ARFoto)) {
 	       				echo "<tr><td>AR-Foto</td><td>".$row['ARFoto']."</td></tr>";
-	       				$arFoto = $row['ARFoto'];
 	       			}
 
 	       			$query_tratamiento_Polarizado = "select count(*) as Polarizado from pedido where tratamiento = 'Polarizado' and fecha='$fecha'";
 	       			$trat_Polarizado = mysql_query($query_tratamiento_Polarizado,$con);
 	       			while ($row = mysql_fetch_array($trat_Polarizado)) {
 	       				echo "<tr><td>Polarizado</td><td>".$row['Polarizado']."</td></tr>";
-	       				$polarizado = $row['Polarizado'];
 	       			}
 
 	       			$query_tratamiento_PolarizadoAR = "select count(*) as PolarizadoAR from pedido where tratamiento = 'Polarizado-AR' and fecha='$fecha'";
 	       			$trat_PolarizadoAR = mysql_query($query_tratamiento_PolarizadoAR,$con);
 	       			while ($row = mysql_fetch_array($trat_PolarizadoAR)) {
 	       				echo "<tr><td>Polarizado-AR</td><td>".$row['PolarizadoAR']."</td></tr>";
-	       				$polarizado_ar = $row['PolarizadoAR'];
 	       			}
 
 
@@ -229,49 +208,21 @@ echo'
 	       			$tipo_Terminado = mysql_query($query_tipo_terminado,$con);
 	       			while ($row = mysql_fetch_array($tipo_Terminado)) {
 	       				echo "<tr><td>Terminado</td><td>".$row['Terminado']."</td></tr>";
-	       				$terminado = $row['Terminado'];
 	       			}
 
 	       			$query_tipo_procesado = "select count(*) as Procesado from pedido where tipo = 'Procesado' and fecha = '$fecha'";
 	       			$tipo_procesado = mysql_query($query_tipo_procesado,$con);
 	       			while ($row = mysql_fetch_array($tipo_procesado)) {
 	       				echo "<tr><td>Procesado</td><td>".$row['Procesado']."</td></tr>";
-	       				$procesado = $row['Procesado'];
 	       			}
 
 	       			$query_tipo_Rebisel = "select count(*) as Rebisel from pedido where tipo = 'Rebisel' and fecha = '$fecha'";
 	       			$tipo_Rebisel = mysql_query($query_tipo_Rebisel,$con);
 	       			while ($row = mysql_fetch_array($tipo_Rebisel)) {
 	       				echo "<tr><td>Rebisel</td><td>".$row['Rebisel']."</td></tr>";
-	       				$rebisel = $row['Rebisel'];
 	       			}
 	       		echo "</table>";
 
-
-       			$query_Sergio = "select count(*) as Sergio from pedido where tecnico = 'Sergio' and fecha = '$fecha'";
-       			$totalsergio = mysql_query($query_Sergio,$con);
-       			while ($row = mysql_fetch_array($totalsergio)) {
-       				$sergio = $row['Sergio'];
-       			}
-
-
-       			$query_Angel = "select count(*) as Angel from pedido where tecnico = 'Angel' and fecha = '$fecha'";
-       			$totalAngel = mysql_query($query_Angel,$con);
-       			while ($row = mysql_fetch_array($totalAngel)) {
-       				$angel = $row['Angel'];
-       			}
-
-       			$query_Francisco = "select count(*) as Francisco from pedido where tecnico = 'Francisco' and fecha = '$fecha'";
-       			$totalFrancisco = mysql_query($query_Francisco,$con);
-       			while ($row = mysql_fetch_array($totalFrancisco)) {
-       				$francisco = $row['Francisco'];
-       			}
-
-       			$query_Jesus = "select count(*) as Jesus from pedido where tecnico = 'Jesus' and fecha = '$fecha'";
-       			$totalJesus = mysql_query($query_Jesus,$con);
-       			while ($row = mysql_fetch_array($totalJesus)) {
-       				$jesus = $row['Jesus'];
-       			}
 
        			$consulta_noticias = "SELECT * FROM pedido where fecha='$fecha'";
 				$rs_noticias = mysql_query($consulta_noticias, $con);
@@ -383,12 +334,12 @@ echo'
 							<p class="text-center"><a href="seleccionar-pedido.php"><span class="glyphicon glyphicon-list-alt select" style="font-size:44px;"></span></a><br>
 	                        Modificar Pedidos</p>
 						</li>
-						<li><p class="text-center"><a href="biseles-fecha/armazon.php?fecha=<?php echo $fecha; ?>&amp;ranurados=<?php echo $ranurados;?>&amp;completos=<?php echo $completos?>&amp;tresPiezas=<?php echo $tresPiezas;?>&amp;monofocal=<?php echo $monofocal;?>&amp;progresivo=<?php echo $progresivo;?>&amp;ft=<?php echo $ft;?>&amp;blend=<?php echo $blend;?>&amp;cr39=<?php echo $cr39; ?>&amp;poly=<?php echo $poly; ?>&amp;hiindex=<?php echo $hi_index; ?>&amp;cristal=<?php echo $cristal; ?>&amp;w=<?php echo $w; ?>&amp;ar=<?php echo $ar; ?>&amp;foto=<?php echo $foto; ?>&amp;transitions=<?php echo $transitions; ?>&amp;crizal=<?php echo $crizal; ?>&amp;transitions_crizal=<?php echo $transitions_crizal; ?>&amp;arFoto=<?php echo $arFoto; ?>&amp;polarizado=<?php echo $polarizado; ?>&amp;polarizado_ar=<?php echo $polarizado_ar; ?>&amp;terminado=<?php echo $terminado; ?>&amp;procesado=<?php echo $procesado; ?>&amp;rebisel=<?php echo $rebisel; ?>&amp;sergio=<?php echo $sergio; ?>&amp;angel=<?php echo $angel; ?>&amp;francisco=<?php echo $francisco; ?>&amp;jesus=<?php echo $jesus; ?>"><span class="glyphicon glyphicon-stats" style="font-size:44px;"></span></a><br>Graficas</p></li>
 					</ul>
 				</div>
 				<div class="row">
-					<div class="col-md-4">
+					<div class="col-md-6">
 						<ul>
+							<ul>
 							<li>
 								<p class="text-center"><a href="index.php"><span class="glyphicon glyphicon-home" style="font-size:44px;"></span></a><br>
 								Home</p>
@@ -401,14 +352,14 @@ echo'
 								<p class="text-center"><a href="alta.php"><span class="glyphicon glyphicon-log-in" style="font-size:44px;"></span></a><br>
 		                        Entradas</p>
 							</li>
-						</ul>
-					</div>
-					<div class="col-md-4">
-						<ul>
 							<li>
 								<p class="text-center"><a href="baja.php"><span class="glyphicon glyphicon-log-out" style="font-size:44px;"></span></a><br>
 		                        Salidas</p>
 							</li>
+						</ul>
+					</div>
+					<div class="col-md-6">
+						<ul>
 							<li>
 								<p class="text-center"><a href="modificar.php"><span class="glyphicon glyphicon-refresh" style="font-size:44px;"></span></a><br>
 		                        Modificar</p>
@@ -417,10 +368,6 @@ echo'
 								<p class="text-center"><a href="pedidos.php"><span class="glyphicon glyphicon-list-alt" style="font-size:44px;"></span></a><br>
 		                        Pedidos</p>
 							</li>
-						</ul>
-					</div>
-					<div class="col-md-4">
-						<ul>
 							<li>
 								<p class="text-center"><a href="informes.php"><span class="glyphicon glyphicon-folder-open" style="font-size:44px;"></span></a><br>
 		                        Informes</p>
@@ -433,24 +380,6 @@ echo'
 								<p class="text-center"><span onclick="window.print()" class="glyphicon glyphicon-print" style="font-size:44px;"></span></a><br>
 		                        Imprimir</p>
 							</li>
-
-						</ul>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4">
-						<ul>
-							<!--<li><a href="biseles-fecha/armazon.php?fecha=<?php echo $fecha; ?>&amp;ranurados=<?php echo $ranurados;?>&amp;completos=<?php echo $completos?>&amp;tresPiezas=<?php echo $tresPiezas;?>&amp;monofocal=<?php echo $monofocal;?>&amp;progresivo=<?php echo $progresivo;?>&amp;ft=<?php echo $ft;?>&amp;blend=<?php echo $blend;?>&amp;cr39=<?php echo $cr39; ?>&amp;poly=<?php echo $poly; ?>&amp;hiindex=<?php echo $hi_index; ?>&amp;cristal=<?php echo $cristal; ?>&amp;w=<?php echo $w; ?>&amp;ar=<?php echo $ar; ?>&amp;foto=<?php echo $foto; ?>&amp;transitions=<?php echo $transitions; ?>&amp;crizal=<?php echo $crizal; ?>&amp;transitions_crizal=<?php echo $transitions_crizal; ?>&amp;arFoto=<?php echo $arFoto; ?>&amp;polarizado=<?php echo $polarizado; ?>&amp;polarizado_ar=<?php echo $polarizado_ar; ?>&amp;terminado=<?php echo $terminado; ?>&amp;procesado=<?php echo $procesado; ?>&amp;rebisel=<?php echo $rebisel; ?>&amp;sergio=<?php echo $sergio; ?>&amp;angel=<?php echo $angel; ?>&amp;francisco=<?php echo $francisco; ?>&amp;jesus=<?php echo $jesus; ?>"><i class="fa fa-pie-chart" style="font-size:48px;"></i>Gráficas</a></li>
-							<li><p class="text-center"><a href="biseles-fecha/armazon.php?fecha=<?php echo $fecha; ?>&amp;ranurados=<?php echo $ranurados;?>&amp;completos=<?php echo $completos?>&amp;tresPiezas=<?php echo $tresPiezas;?>&amp;monofocal=<?php echo $monofocal;?>&amp;progresivo=<?php echo $progresivo;?>&amp;ft=<?php echo $ft;?>&amp;blend=<?php echo $blend;?>&amp;cr39=<?php echo $cr39; ?>&amp;poly=<?php echo $poly; ?>&amp;hiindex=<?php echo $hi_index; ?>&amp;cristal=<?php echo $cristal; ?>&amp;w=<?php echo $w; ?>&amp;ar=<?php echo $ar; ?>&amp;foto=<?php echo $foto; ?>&amp;transitions=<?php echo $transitions; ?>&amp;crizal=<?php echo $crizal; ?>&amp;transitions_crizal=<?php echo $transitions_crizal; ?>&amp;arFoto=<?php echo $arFoto; ?>&amp;polarizado=<?php echo $polarizado; ?>&amp;polarizado_ar=<?php echo $polarizado_ar; ?>&amp;terminado=<?php echo $terminado; ?>&amp;procesado=<?php echo $procesado; ?>&amp;rebisel=<?php echo $rebisel; ?>&amp;sergio=<?php echo $sergio; ?>&amp;angel=<?php echo $angel; ?>&amp;francisco=<?php echo $francisco; ?>&amp;jesus=<?php echo $jesus; ?>"><span class="glyphicon glyphicon-stats" style="font-size:44px;"></span></a></p></li>
-							-->
-						</ul>
-					</div>
-					<div class="col-md-4">
-						<ul>
-						</ul>
-					</div>
-					<div class="col-md-4">
-						<ul>
 						</ul>
 					</div>
 				</div>
