@@ -1,6 +1,6 @@
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/lab.css">
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <link rel="stylesheet" type="text/css" href="css/informes.css">
@@ -433,20 +433,14 @@ echo'
 				<div class="row">
 					<div class="col-md-4">
 						<ul>
-							<li><a href="biseles-fecha-rango/armazon.php?fecha=<?php echo $fecha; ?>&amp;fecha2=<?php echo $fecha2; ?>&amp;ranurados=<?php echo $ranurados;?>&amp;completos=<?php echo $completos?>&amp;tresPiezas=<?php echo $tresPiezas;?>"><i class="fa fa-pie-chart" style="font-size:48px;"></i>Armazon</a></li>
-							<li><a href="biseles-fecha-rango/micas.php?fecha=<?php echo $fecha; ?>&amp;fecha2=<?php echo $fecha2; ?>&amp;monofocal=<?php echo $monofocal;?>&amp;progresivo=<?php echo $progresivo;?>&amp;ft=<?php echo $ft;?>&amp;blend=<?php echo $blend;?>"><i class="fa fa-pie-chart" style="font-size:48px;"></i>Micas</a></li>
-							<li><a href="biseles-fecha-rango/materiales.php?fecha=<?php echo $fecha; ?>&amp;fecha2=<?php echo $fecha2; ?>&amp;cr39=<?php echo $cr39; ?>&amp;poly=<?php echo $poly; ?>&amp;hiindex=<?php echo $hi_index; ?>&amp;cristal=<?php echo $cristal; ?>"><i class="fa fa-pie-chart" style="font-size:48px;"></i>Materiales</a></li>
+						<li><a href="biseles-fecha-rango/armazon.php?fecha=<?php echo $fecha; ?>&amp;fecha2=<?php echo $fecha2; ?>&amp;ranurados=<?php echo $ranurados;?>&amp;completos=<?php echo $completos?>&amp;tresPiezas=<?php echo $tresPiezas;?>&amp;monofocal=<?php echo $monofocal;?>&amp;progresivo=<?php echo $progresivo;?>&amp;ft=<?php echo $ft;?>&amp;blend=<?php echo $blend;?>&amp;cr39=<?php echo $cr39; ?>&amp;poly=<?php echo $poly; ?>&amp;hiindex=<?php echo $hi_index; ?>&amp;cristal=<?php echo $cristal; ?>&amp;w=<?php echo $w; ?>&amp;ar=<?php echo $ar; ?>&amp;foto=<?php echo $foto; ?>&amp;transitions=<?php echo $transitions; ?>&amp;crizal=<?php echo $crizal; ?>&amp;transitions_crizal=<?php echo $transitions_crizal; ?>&amp;arFoto=<?php echo $arFoto; ?>&amp;polarizado=<?php echo $polarizado; ?>&amp;polarizado_ar=<?php echo $polarizado_ar; ?>&amp;terminado=<?php echo $terminado; ?>&amp;procesado=<?php echo $procesado; ?>&amp;rebisel=<?php echo $rebisel; ?>&amp;sergio=<?php echo $sergio; ?>&amp;angel=<?php echo $angel; ?>&amp;francisco=<?php echo $francisco; ?>&amp;jesus=<?php echo $jesus; ?>"><i class="fa fa-pie-chart" style="font-size:48px;"></i>Gráficas</a></li>
 						</ul>
 					</div>
 					<div class="col-md-4">
 						<ul>
-							<li><a href="biseles-fecha-rango/tratamiento.php?fecha=<?php echo $fecha; ?>&amp;fecha2=<?php echo $fecha2; ?>&amp;w=<?php echo $w; ?>&amp;ar=<?php echo $ar; ?>&amp;foto=<?php echo $foto; ?>&amp;transitions=<?php echo $transitions; ?>&amp;crizal=<?php echo $crizal; ?>&amp;transitions_crizal=<?php echo $transitions_crizal; ?>&amp;arfoto=<?php echo $arFoto; ?>&amp;polarizado=<?php echo $polarizado; ?>&amp;polarizado_ar=<?php echo $polarizado_ar; ?>"><i class="fa fa-pie-chart" style="font-size:48px;"></i>Tratamiento</a></li>
-							<li><a href="biseles-fecha-rango/tipo.php?fecha=<?php echo $fecha; ?>&amp;fecha2=<?php echo $fecha2; ?>&amp;terminado=<?php echo $terminado; ?>&amp;procesado=<?php echo $procesado; ?>&amp;rebisel=<?php echo $rebisel; ?>"><i class="fa fa-pie-chart" style="font-size:48px;"></i>Tipo</a></li>
-							<li><a href="biseles-fecha-rango/tecnicos.php?fecha=<?php echo $fecha; ?>&amp;fecha2=<?php echo $fecha2; ?>&amp;sergio=<?php echo $sergio; ?>&amp;angel=<?php echo $angel; ?>&amp;francisco=<?php echo $francisco; ?>&amp;jesus=<?php echo $jesus; ?>"><i class="fa fa-pie-chart" style="font-size:48px;"></i>Tecnicos</a></li>
 						</ul>
 					</div>
 					<div class="col-md-4">
-						<li><a href="biseles-fecha-rango/armazon.php?fecha=<?php echo $fecha; ?>&amp;fecha2=<?php echo $fecha2; ?>&amp;ranurados=<?php echo $ranurados;?>&amp;completos=<?php echo $completos?>&amp;tresPiezas=<?php echo $tresPiezas;?>&amp;monofocal=<?php echo $monofocal;?>&amp;progresivo=<?php echo $progresivo;?>&amp;ft=<?php echo $ft;?>&amp;blend=<?php echo $blend;?>&amp;cr39=<?php echo $cr39; ?>&amp;poly=<?php echo $poly; ?>&amp;hiindex=<?php echo $hi_index; ?>&amp;cristal=<?php echo $cristal; ?>&amp;w=<?php echo $w; ?>&amp;ar=<?php echo $ar; ?>&amp;foto=<?php echo $foto; ?>&amp;transitions=<?php echo $transitions; ?>&amp;crizal=<?php echo $crizal; ?>&amp;transitions_crizal=<?php echo $transitions_crizal; ?>&amp;arFoto=<?php echo $arFoto; ?>&amp;polarizado=<?php echo $polarizado; ?>&amp;polarizado_ar=<?php echo $polarizado_ar; ?>&amp;terminado=<?php echo $terminado; ?>&amp;procesado=<?php echo $procesado; ?>&amp;rebisel=<?php echo $rebisel; ?>&amp;sergio=<?php echo $sergio; ?>&amp;angel=<?php echo $angel; ?>&amp;francisco=<?php echo $francisco; ?>&amp;jesus=<?php echo $jesus; ?>"><i class="fa fa-pie-chart" style="font-size:48px;"></i>Armazon</a></li>
 					</div>
 				</div>
 			</div>
