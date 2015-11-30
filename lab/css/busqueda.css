@@ -77,3 +77,7 @@ img{
 table{
 	font-size: 13px;
 }
+
+.code-f, .code-r{
+	width: 40%;
+}

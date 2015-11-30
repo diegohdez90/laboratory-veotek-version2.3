@@ -8,7 +8,7 @@
 <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
 <link href="https://fonts.googleapis.com/css?family=Michroma" rel="stylesheet" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script><script src="../js/bootstrap.min.js"></script>
 <script src="js/code-folio.js"></script>
 
 </head>
@@ -59,7 +59,7 @@ echo'
                 <?php
                     }
                 ?>
-                    <input type="hidden" name="code" id="code-f" value="">
+                    <input class="form-control code-f" placeholder="Clave" type="password" name="code" id="code-f" value="">
                     <input type="submit" id="submit" value="Buscar" >
                 </div>
             </form>
@@ -69,7 +69,7 @@ echo'
                 <div class="form-group">
                     <label><b>Referencia</b></label><br>
                     <input class="form-control" id="ref" name="ref" >
-                    <input type="hidden" name="code" id="code-r" value="">
+                    <input class="form-control code-r" placeholder="Clave" type="password" name="code" id="code-r" value="">
                     <input type="submit" id="submit" value="Buscar" >
                 </div>
             </form>

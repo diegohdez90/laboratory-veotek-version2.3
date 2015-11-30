@@ -1,35 +1,23 @@
-var insertCodeF = function() {
-    var c = prompt("Inserta tu codigo", "");
-    
-    if (c != null) {
-    	if (c==="Segartor" || c==="chohujs") {
-    		document.getElementById("code-f").value=c;
-    		return true;
-    	}
-    	else{
-    		insertCodeF();
-    	}
+var insertCodeF = function(){
+    var code = document.getElementById("code-f").value;
+
+    if(code==="Segartor" || code === "chohujs"){
+        alert("Acceso concedido");
+        return true;    
     }
     else{
-    	confirm("Inserta tu codigo");
-    	insertCodeF();
+        return false;
     }
 }
 
-var insertCodeR = function() {
-    var c = prompt("Inserta tu codigo", "");
-    
-    if (c != null) {
-        if (c==="Segartor" || c==="chohujs") {
-            document.getElementById("code-r").value=c;
-            return true;
-        }
-        else{
-            insertCodeF();
-        }
+var insertCodeR = function(){
+    var code = document.getElementById("code-r").value;
+
+    if(code==="Segartor" || code === "chohujs"){
+        alert("Acceso concedido");
+        return true;    
     }
     else{
-        confirm("Inserta tu codigo");
-        insertCodeF();
+        return false;
     }
 }
