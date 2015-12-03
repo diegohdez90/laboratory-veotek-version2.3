@@ -24,8 +24,9 @@
                                 mysqli_select_db($link, "inventario1");
                                 
                         $folio = $_POST['folio'];
-                        $ref = $_POST['ref'];
-                        //$fecha = $_POST['fecha'];
+                        $oldref = $_POST['oldref'];
+                        $newref = $_POST['newref'];
+                        $fecha = $_POST['fecha'];
                         $tecnico=$_POST['tecnico'];
                         $ode1=$_POST['ode'];
                         $odc1=$_POST['odc'];
@@ -55,13 +56,14 @@
                         //$m_ed = $_POST['medida-ed'];
                         //$m_dbl = $_POST['medida-dbl'];
                         $responsable = $_POST['responsable'];
+                        $motivos = $_POST['motivos'];
 
 
 
                         //4. Insertar campos en la Base de Datos (No inserto el id_empleado ya que se genera automaticamente)
                         //$res = mysqli_query($link,"select ref from pedido where ref = '$ref'");
 
-                            $insertar = mysqli_query($link,"update pedido set tecnico='$tecnico',ode1='$ode1',odc1='$odc1',odej1='$odej1',odd1='$odd1',oda1='$oda1',odal1='$odal1',oie2='$oie2',oic2='$oic2',oiej2='$oiej2',oid2='$oid2',oia2='$oia2',oial2='$oial2',armazon='$armazon',micas='$micas',materiales='$materiales',tratamiento='$tratamiento',tipo='$tipo',modificado='$responsable' where folio = '$folio' and ref = '$ref'");
+                            $insertar = mysqli_query($link,"update pedido set ref='$newref',fecha='$fecha',tecnico='$tecnico',ode1='$ode1',odc1='$odc1',odej1='$odej1',odd1='$odd1',oda1='$oda1',odal1='$odal1',oie2='$oie2',oic2='$oic2',oiej2='$oiej2',oid2='$oid2',oia2='$oia2',oial2='$oial2',armazon='$armazon',micas='$micas',materiales='$materiales',tratamiento='$tratamiento',tipo='$tipo',modificado='$responsable',motivos='$motivos' where folio = '$folio' and ref = '$oldref'");
 
                         if(!$insertar) {
                         die("<h3 class='text-center'>Fallo en la insercion de registro en la Base de Datos: " . mysql_error()."</h3>");

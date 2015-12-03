@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css?family=Michroma" rel="stylesheet" type="text/css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
-<script src="js/lab.js"></script>
+<script src="js/pedidos.js"></script>
 
 </head>
 
@@ -45,7 +45,7 @@ echo'
 
 		<div class="row">
 			<div class="col-md-10 pedidos">
-				<form onsubmit="return confirm('¿Esta de acuerdo en proseguir?');" action="registrar-pedido.php" method="post" enctype="multipart/form-data">
+				<form onsubmit="return insertPedido()"  action="registrar-pedido.php" method="post" enctype="multipart/form-data">
     				<div class="form-group">
 	    				<div class="col-xs-3">
 	    				<?php
@@ -202,6 +202,13 @@ echo'
 								<div class="col-xs-2 medida"><label>B</label><input class="form-control" id="medida-b" name="medida-b"></div>
 								<div class="col-xs-2 medida"><label>ED</label><input class="form-control" id="medida-ed" name="medida-ed"></div>
 								<div class="col-xs-2 medida"><label>DBL</label><input class="form-control" id="medida-dbl" name="medida-dbl"></div>
+						<div class="form-group">
+							<div class="col-xs-3">
+								<label><b>Clave de Seguridad</b></label>
+								<input class="form-control" type="password" id="pwd" name="pwd" value="">
+							</div>
+						</div>
+					
 						<br><br><br><br>
 
 						<div class="form-group">

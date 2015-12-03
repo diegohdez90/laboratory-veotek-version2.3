@@ -99,13 +99,14 @@ echo'
 					<?php while ($rowEmp = mysql_fetch_assoc($resEmp)) {?>	
 					<div>
 							<div class="col-xs-2"><label>Folio</label> <br><?php echo $rowEmp['folio']; ?> <input type="hidden" name="folio" value="<?php echo $rowEmp['folio']; ?>"></div>
-							<div class="col-xs-2"><label>Referencia</label> <br><?php echo $rowEmp['ref']; ?> <input type="hidden" name="ref" value="<?php echo $rowEmp['ref']; ?>"></div>
-							<div class="col-xs-2"><label>Fecha</label> <br><?php echo $rowEmp['fecha']; ?></div>
-							<div class="col-xs-2"><label>Tecnico</label> <br> <?php echo $rowEmp['tecnico']; ?></div>
+							<div class="col-xs-2"><label>Referencia</label> <br><?php //echo $rowEmp['ref']; ?> <input name="newref" class="form-control" value="<?php echo $rowEmp['ref']; ?>"></div>
+							<input type="hidden" name="oldref" class="form-control" value="<?php echo $rowEmp['ref']; ?>">
+							<div class="col-xs-2"><label>Fecha</label> <br><?php //echo $rowEmp['fecha']; ?> <input name="fecha" class="form-control" value="<?php echo $rowEmp['fecha']; ?>"></div>
+							<div class="col-xs-2"><label>Tecnico</label> <br> <?php 	echo $rowEmp['tecnico']; ?></div>
 							<label><?php echo "Usted es: ".$responsable_modificar;?></label>						
 						<input type="hidden" value="<?php echo $responsable_modificar; ?>" name="responsable">
 					</div>
-					<br><br><br><br>	
+					<br><br><br><br>
 
 
 				 			<div class="col-xs-2 od"><label><b>OD</b></label></div>
@@ -130,10 +131,8 @@ echo'
 				 			<!--<div class="col-xs-2"><input class="form-control" value="<?php echo $rowEmp['oib2']; ?>"></div>-->
 				<div class="form-group">
 					<div class="col-xs-3 desc">
-						<label>Descripci&oacute;n</label>							
-
-						<?php echo $rowEmp['descripcion']; ?><br>
-
+						<label for="motivos">Motivos</label>							
+			 			<textarea name="motivos" class="form-control" rows="10" cols="50" id="motivos"></textarea><br>
 					</div>
 							
 				</div>
